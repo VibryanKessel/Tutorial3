@@ -4,17 +4,19 @@
         <div class="buttons">
             <base-button value="BaseButton with custom margin" />
             <base-button disabled="true" value="Basebutton disabled" />
+            <async-button value = "Disabled and animated  for 2 seconds if clicked"/>
         </div>
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import AsyncButton from "./AsyncButton.vue";
 import BaseButton from "./BaseButton.vue";
 
 export default defineComponent({
     name: "HomePage",
-  components: { BaseButton },
+  components: { BaseButton, AsyncButton },
   props: {
   },
 });
