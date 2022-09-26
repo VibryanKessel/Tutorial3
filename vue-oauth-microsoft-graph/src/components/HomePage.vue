@@ -1,5 +1,7 @@
 <template>
-    <h1>Here's the Home page !</h1>
+    <div class="header">
+        <h1>Here's the Home page !</h1>
+    </div>
 </template>
 
 <script lang="ts">
@@ -11,3 +13,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+    .header{
+        margin: 10em;
+    }
+</style>
