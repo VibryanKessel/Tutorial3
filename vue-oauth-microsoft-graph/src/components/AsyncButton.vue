@@ -26,18 +26,20 @@ export default {
     color: {
       type: String,
       default: 'primary'
-    }
+    },
   },
-
+  
   data () {
     return {
+      time : 0,
       isPending: false
     }
   },
-
+  
   methods: {
     handleClick () {
-      const originalOnClick =  new Promise(resolve => setTimeout(resolve, 2000))
+      this.time += 1000
+      const originalOnClick =  new Promise(resolve => setTimeout(resolve, this.time))
       this.isPending = true
       originalOnClick.finally(() => { this.isPending = false })
     }
